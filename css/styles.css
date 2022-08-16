@@ -57,6 +57,13 @@ body {
 
 /* ============== COMPONENTS ============== */
 
+.container {
+  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .logotype {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -64,6 +71,7 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+  margin-right: 93px;
 }
 
 .btn:hover,
@@ -96,6 +104,31 @@ body {
 
 /* ============== HEADER ============== */
 
+.page-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.page-header-container {
+  display: flex;
+  align-items: center;
+}
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: flex;
+}
+.menu-item:not(:last-child),
+.list-item:not(:last-child) {
+  margin-right: 50px;
+
+}
+
+.menu-contact {
+  margin-left: auto;
+  display: flex;
+}
 .menu-link {
   font-family: inherit;
   font-weight: 500;
@@ -143,7 +176,6 @@ body {
   letter-spacing: 0.06em;
   color: var(--light-text-color);
   background-color: var(--accent-color);
-  cursor: pointer;
 }
 
 .benefit-title {
@@ -218,17 +250,28 @@ body {
 }
 .page-footer {
   background-color: var(--bg-dark-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .logo-footer {
   color: var(--color-logo-theme-dark);
 }
-
+.logo-link-footer {
+  margin-right: 0;
+  margin-bottom: 20px;
+  display: inline-block;
+}
 .address-item {
   line-height: 1.71;
+
+}
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .address-link {
   color: var(--light-text-color);
+  
 }
 
 .info-link {
