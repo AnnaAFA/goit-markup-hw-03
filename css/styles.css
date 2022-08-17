@@ -24,11 +24,16 @@ button {
   cursor: pointer;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   margin-top: 0;
   margin-bottom: 0;
 }
-ul, ol {
+ul,
+ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -42,23 +47,10 @@ body {
   letter-spacing: 0.03em;
 }
 
-.team-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  color: var(--primary-color);
-}
-
-.team-position {
-  font-size: 16px;
-  line-height: 1.19;
-  color: var(--secondary-color);
-}
-
 /* ============== COMPONENTS ============== */
 
 .container {
-  width: 1230px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -74,8 +66,8 @@ body {
   margin-right: 93px;
 }
 
-.btn:hover,
-.btn:focus {
+.hero-btn:hover,
+.hero-btn:focus {
   background-color: var(--btn-bg-color-hover);
 }
 
@@ -99,7 +91,10 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
-
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* ============== /COMPONENTS ============== */
 
 /* ============== HEADER ============== */
@@ -107,6 +102,7 @@ body {
 .page-header {
   padding-top: 24px;
   padding-bottom: 24px;
+  border: 1px solid #ececec;
 }
 .page-header-container {
   display: flex;
@@ -122,7 +118,6 @@ body {
 .menu-item:not(:last-child),
 .list-item:not(:last-child) {
   margin-right: 50px;
-
 }
 
 .menu-contact {
@@ -157,6 +152,8 @@ body {
 
 .hero {
   background-color: var(--bg-dark-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   font-weight: 900;
@@ -166,9 +163,12 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--light-text-color);
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
-
-.btn {
+.hero-btn {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -176,25 +176,80 @@ body {
   letter-spacing: 0.06em;
   color: var(--light-text-color);
   background-color: var(--accent-color);
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 32px;
+  display: block;
+  margin: 0 auto;
 }
+.benefit-list {
+  display: flex;
+  column-gap: 30px;
+}
+
+/* Чи краще задати margin-right замість column-gap? */
+
+/* .benefit-item:not(:last-child),
+.project-item:not(:last-child),
+.team-card:not(:last-child) {
+  margin-right: 30px;
+} */
 
 .benefit-title {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--primary-color);
+  margin-bottom: 10px;
 }
 
 .benefit-text {
   line-height: 1.71;
   color: var(--secondary-color);
 }
+.project-title {
+  margin-bottom: 50px;
+}
+
+.project-list {
+  display: flex;
+  column-gap: 30px;
+}
+
+.team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--primary-color);
+}
+
+.team-position {
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--secondary-color);
+}
 
 .team {
   background: var(--bg-light-color);
 }
+.team-title {
+  margin-bottom: 50px;
+}
+.team-list {
+  display: flex;
+  column-gap: 30px;
+  flex-wrap: wrap;
+}
+.team-name {
+  margin-bottom: 10px;
+}
 .team-card {
   background-color: var(--light-text-color);
+}
+.indent-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .menu-link:hover,
@@ -208,10 +263,20 @@ body {
 .info-link:focus {
   color: var(--accent-color);
 }
+.projects {
+  padding-bottom: 94px;
+}
 /* ============== /MAIN ============== */
 
 /* ============== MAIN-PORTFOLIO ============== */
-
+.service-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.service-item:not(:last-child) {
+  margin-right: 8px;
+}
 .service-btn {
   font-family: inherit;
   font-weight: 500;
@@ -221,11 +286,25 @@ body {
   color: var(--primary-color);
   background: var(--bg-light-color);
   cursor: pointer;
+  border: 0;
+  padding: 6px 22px;
+  border-radius: 4px;
 }
 .service-btn:hover,
 .service-btn:focus {
   color: var(--light-text-color);
   background-color: var(--accent-color);
+}
+
+.service-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.indent-service-card {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .service-title {
@@ -234,6 +313,7 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-color);
+  margin-bottom: 4px;
 }
 
 .service-text {
@@ -263,7 +343,6 @@ body {
 }
 .address-item {
   line-height: 1.71;
-
 }
 .address-item:not(:last-child) {
   margin-bottom: 9px;
@@ -271,7 +350,6 @@ body {
 
 .address-link {
   color: var(--light-text-color);
-  
 }
 
 .info-link {
