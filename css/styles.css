@@ -64,6 +64,8 @@ body {
   letter-spacing: 0.03em;
   color: var(--accent-color);
   margin-right: 93px;
+  padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 .hero-btn:hover,
@@ -100,9 +102,7 @@ body {
 /* ============== HEADER ============== */
 
 .page-header {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 .page-header-container {
   display: flex;
@@ -124,13 +124,18 @@ body {
   margin-left: auto;
   display: flex;
 }
+
 .menu-link {
+  display: inline-block;
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-color);
+  padding-top: 32px;
+    padding-bottom: 32px;
+ 
 }
 
 .list-link {
@@ -185,15 +190,10 @@ body {
 .benefit-list {
   display: flex;
   column-gap: 30px;
+  
 }
 
-/* Чи краще задати margin-right замість column-gap? */
 
-/* .benefit-item:not(:last-child),
-.project-item:not(:last-child),
-.team-card:not(:last-child) {
-  margin-right: 30px;
-} */
 
 .benefit-title {
   font-weight: 700;
@@ -206,6 +206,9 @@ body {
 .benefit-text {
   line-height: 1.71;
   color: var(--secondary-color);
+}
+.benefit-item {
+  flex-basis: calc((100% - 90px) / 4);
 }
 .project-title {
   margin-bottom: 50px;
@@ -247,8 +250,7 @@ body {
   background-color: var(--light-text-color);
 }
 .indent-card {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 10px;
   text-align: center;
 }
 
@@ -273,10 +275,9 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  column-gap: 8px;
 }
-.service-item:not(:last-child) {
-  margin-right: 8px;
-}
+
 .service-btn {
   font-family: inherit;
   font-weight: 500;
@@ -294,6 +295,7 @@ body {
 .service-btn:focus {
   color: var(--light-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .service-card {
@@ -340,6 +342,7 @@ body {
   margin-right: 0;
   margin-bottom: 20px;
   display: inline-block;
+  padding: 0;
 }
 .address-item {
   line-height: 1.71;
